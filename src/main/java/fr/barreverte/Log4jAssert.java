@@ -9,10 +9,10 @@ import org.apache.log4j.PropertyConfigurator;
 public class Log4jAssert {
 
 	public static void spy() {
-        Properties logProperties = new Properties();
-        logProperties.setProperty("log4j.rootLogger", "TRACE, test_logger");
-        logProperties.setProperty("log4j.appender.test_logger", SpyAppender.class.getName());
-        PropertyConfigurator.configure(logProperties);
+		Properties logProperties = new Properties();
+		logProperties.setProperty("log4j.rootLogger", "TRACE, test_logger");
+		logProperties.setProperty("log4j.appender.test_logger", SpyAppender.class.getName());
+		PropertyConfigurator.configure(logProperties);
 	}
 
 	public static Appender getAppender() {
